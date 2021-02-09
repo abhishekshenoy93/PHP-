@@ -47,15 +47,27 @@
 
 </head>
 <body>
-  <form name="UserLogin" method="post" action="updateThisUser.php">
+
+  <?php require_once("config.php"); ?>
+
+  <!-- Table goes in the document BODY -->
   <table class="table-style-three">
-    <th>username</th><td><input type="text" name="username"></td>
-    <th>password</th><td><input type="text" name="password"></td>
+      <thead>
+      <!-- Display CRUD options in TH format -->
+      <tr>
+        <th><a href="createNewRecord.php">Create a new state (C)</a></th>
+      </tr>
+      <tr>
+        <th><a href="displayAllRecords.php">Read all information by state (R)</a></th>
+      </tr>
+      <tr>
+        <th><a href="updaterecord.php">Update a state (U)</a></th>
+      </tr>
+      <tr>
+          <th><a href="searchRecordsByZip.php">Get records by zipcode (D)</a></th>
+      </tr>
+      </thead>
   </table>
-
-    <input type="submit" name="submit">
-
-  </form>
 
 </body>
 </html>
